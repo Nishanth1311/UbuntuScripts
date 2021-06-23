@@ -1,0 +1,96 @@
+[user]
+	name = <your name>
+	email = <your github mail ID>
+
+[diff]
+	tool = kompare
+
+[merge]
+	tool = kompare
+
+[alias]
+	# Status
+	s = status
+
+	# Clone
+	cl = clone
+
+	# Branch
+	br = branch
+	bd = br -D
+	by = branch --unset-upstream
+	dlo = push --delete origin
+
+	# Checkout
+	co = checkout
+	cob = checkout -b
+
+	# Submodule
+	sm = submodule
+	si = submodule update --init --recursive
+	pi = "!f() { git pull ; git submodule update --init --recursive ;}; f"
+
+	# difftool and mergetool
+	dt = difftool
+	dm = difftool master
+	dth = "!f() { git dt HEAD~\"$1\";}; f"
+	mt = mergetool
+	msync = "!f() { git merge master ; git push ;}; f"
+
+	# Pull and push
+	pl = pull
+	ps = push
+
+	# Add commit push
+	ad = add .
+	com = commit -m
+	pu = push --set-upstream origin
+	ac = "!f() { git add .; git commit -m \"$1\" ;}; f"
+	publish = "!f() { git add . ; git commit -m \"$1\" ; git push ;}; f"
+	acp = publish
+
+	# Clean up
+	cf = clean -ffd
+	rh = reset --hard
+	cr = "!f() { git clean -ffd; git reset --hard ;}; f"
+
+	# restore
+	rst = restore --staged
+
+	# rebase
+	r = rebase
+	ra = rebase --abort
+	rsk = rebase --skip
+	rih = "!f() { git rebase -i HEAD~\"$1\";}; f"
+	ri = rebase -i
+	rc = rebase --continue
+	rem = rebase master
+
+	# Cherry picks
+	cp = cherry-pick
+	cpa = cherry-pick --abort
+	cpc = cherry-pick --continue
+	cps = cherry-pick --skip
+
+	# Stash
+	st = stash
+	sp = stash pop
+
+	# Others
+	h = HEAD
+	l = log
+	fp = fetch --prune
+
+	# personal branch
+	pcr = "!f() { git cob personal/<name>/\"$1\";}; f"
+	pco = "!f() { git co personal/<name>/\"$1\";}; f"
+	pbd = "!f() { git bd personal/<name>/\"$1\";}; f"
+
+	# initialization bundle
+	rt = "!f() { git pl; git pl; git fp; git si; git s ;}; f"
+
+[credential]
+	helper = cache
+
+[core]
+	editor = vim

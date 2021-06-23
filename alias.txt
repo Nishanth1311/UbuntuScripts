@@ -1,0 +1,50 @@
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+alias lh='ls -ld .?*'
+
+# my alias
+alias g='git'
+alias e='exit'
+alias p='python3'
+alias n='notepad-plus-plus'
+alias al='nano ~/.bashrc'
+alias up='sudo apt-get update && sudo apt-get upgrade'
+alias st='nautilus'
+alias s='gnome-terminal'
+
+# create and delete directory
+alias mk='mkdir'
+alias rmd='rmdir'
+
+# windows me wants this
+alias cls='clear'
+alias cl='clear'
+alias ck='clear'
+alias ren='mv'
+
+# cd alias
+alias c='cd ..'
+alias c2='cd ../..'
+alias c3='cd ../../..'
+
+# git alias
+alias g='git'
+alias gc='nano /home/nishanth/.gitconfig'
+
+# truffle alias
+alias tm='truffle migrate'
+alias tmr='truffle migrate --reset'
+alias tc='truffle console'
+alias tt='truffle test'
+
+# NPM alias
+alias ni='npm install'
+
+# App alias
+alias ssi='sudo snap install'
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
