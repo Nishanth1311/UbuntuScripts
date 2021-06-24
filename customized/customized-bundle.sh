@@ -10,4 +10,7 @@ sudo sh ./postgresql.sh
 # GCC
 sudo sh ./gcc.sh
 
+# Beyond compare
+yes | sudo sh ./beyond-compare.sh
+
 echo "Completed all customized installations"
