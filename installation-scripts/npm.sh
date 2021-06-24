@@ -2,4 +2,7 @@
 echo "Installing necessary NPM bundles"
 
 echo "Installing truffle"
-npm install -g truffle
+sudo npm install -g truffle
+
+echo "Installing bower"
+sudo npm install -g bower
