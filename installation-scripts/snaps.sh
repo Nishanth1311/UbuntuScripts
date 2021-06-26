@@ -14,16 +14,16 @@ sudo snap install geth
 echo "Installing kompare"
 sudo snap install kompare
 
-echo "Installing notepad-plus-plus"
-sudo snap install notepad-plus-plus
-
 echo "Installing p3x-onenote"
 sudo snap install p3x-onenote
 
 echo "Installing sublime-text"
-sudo snap install sublime-text
+sudo snap install sublime-text --classic
 
 echo "Installing vs-code"
 sudo snap install code --classic
+
+echo "Installing Flutter"
+sudo snap install flutter --classic
 
 echo "Completed all snaps"

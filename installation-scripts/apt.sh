@@ -25,17 +25,13 @@ vim --version
 # Installing node
 echo "Installing nodejs"
 sudo apt install nodejs
-echo "NPM Version"
+echo "Node Version"
 node --version
 
-# Installing node
-echo "Installing ethereum"
-sudo apt install ethereum
-
-# Installing node
-echo "Installing geth"
-sudo apt install geth
+echo "Install npm"
+yes | sudo apt install npm
 
 # Install python
 echo "Installing python"
-sudo apt-get install idle
+yes | sudo apt install python3-pip
+yes | sudo apt-get install idle
